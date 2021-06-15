@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --green: #184a45ff;
+  --grey: #b0b8b4ff;
+  --orange: #fc766aff;
+}
+html {
+  font-size: 1em;
+  scroll-behavior: smooth;
+}
+
+/* Start of Nav Section */
+
+#navbar {
+  background: var(--green);
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  padding: 2em;
+  z-index: 999;
+  border-bottom: 1px solid white;
+}
+div {
+  display: inline-flex;
+  position: relative;
+}
+.nav-links {
+  color: white;
+  text-decoration: none;
+}
+.nav-links:hover {
+  color: var(--orange);
+}
+
+/* End of Nav Section */
+
+/* Start of Welcome Section */
+
+#welcome-section {
+  color: white;
+  background-color: var(--grey);
+  height: 100vh;
+  width: 100%;
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  z-index: 0;
+  word-spacing: 0.1rem;
+  font-size: 1.8rem;
+}
+.name {
+  color: white;
+  position: static;
+}
+span {
+  font-size: 1.4rem;
+  color: var(--orange);
+}
+#job {
+  color: white;
+  position: static;
+}
+
+/* End of Welcome Section */
+
+/* About-me section */
+
+#about {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--orange);
+  border-top: 1px solid white;
+}
+
+#about-me {
+  max-width: 15rem;
+  margin: 0 auto 1rem auto;
+  border-bottom: 0.3rem solid white;
+  margin-top: 4rem;
+  font-size: 3rem;
+  text-align: center;
+  color: white;
+}
+/* end of about me section*/
+
+/* Projects Section */
+
+.projects-section {
+  text-align: center;
+  padding: 10rem 2rem;
+  background: var(--green);
+  color: white;
+  border-top: 1px solid white;
+}
+
+.projects-section-header {
+  max-width: 640px;
+  margin: 0 auto 6rem auto;
+  border-bottom: 0.2rem solid white;
+  font-size: 3rem;
+}
+
+@media (max-width: 28.75em) {
+  .projects-section-header {
+    font-size: 4rem;
+  }
+}
+
+/* "Automagic" image grid using no media queries */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+@media (max-width: 30.625em) {
+  .projects-section {
+    padding: 6rem 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project {
+  background: var(--orange);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+}
+
+.code {
+  color: var(--orange);
+  transition: color 0.3s ease-out;
+}
+
+.project:hover .code {
+  color: white;
+}
+
+.project-image {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 2rem;
+  padding: 2rem 0.5rem;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* End of Project section */
+
+/* Contract info + footer */
+#contact {
+  background-color: var(--grey);
+  height: 100%;
+  border-top: 1px solid white;
+}
+#footer-title {
+  color: white;
+  text-align: center;
+  margin: 4rem auto;
+  font-size: 3.6rem;
+  letter-spacing: 0.3rem;
+}
+#footer-title:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+  border-bottom: 0.3rem solid white;
+}
+
+.media {
+  position: relative;
+  top: 10%;
+  left: 9%;
+}
+
+li {
+  list-style: none;
+  margin: 0.5rem 2.6rem;
+  display: inline-block;
+  font-size: 20px;
+  padding: 1.5rem 1.5rem;
+  color: white;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+a {
+  color: white;
+}
+#resume {
+  position: relative;
+}
+li:hover {
+  background-color: var(--orange);
+}
