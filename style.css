@@ -193,11 +193,12 @@ a {
   border-bottom: 0.3rem solid white;
 }
 
-.media {
-  position: relative;
+ .media {
+  position: relative; /* may change */
   top: 10%;
   left: 9%;
-}
+}  
+
 
 li {
   list-style: none;
